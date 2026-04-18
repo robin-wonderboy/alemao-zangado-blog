@@ -1,6 +1,6 @@
 name: "O alemão zangado"
 baseURL: "https://alemao-zangado.github.io"
-description: "Um blog de Coimbra — sobre a cidade, as pessoas e as decisões que nos afetam a todos"
+description: "Um blog de Coimbra"
 language: "pt"
 
 localization:
@@ -33,7 +33,7 @@ sections:
     contentDirectory: "Blog"
     urlPrefix: "blog"
     rssTitle: "O alemão zangado"
-    rssDescription: "Um blog de Coimbra — sobre a cidade, as pessoas e as decisões que nos afetam a todos"
+    rssDescription: "Um blog de Coimbra"
 
 homePage:
   title: "O alemão zangado"
