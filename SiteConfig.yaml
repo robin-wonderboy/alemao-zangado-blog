@@ -1,8 +1,6 @@
 name: "O alemão zangado"
 baseURL: "https://alemao-zangado.github.io"
 description: "Um blog de Coimbra — sobre a cidade, as pessoas e as decisões que nos afetam a todos"
-language: "pt"
-
 contentDirectory: "Content"
 outputDirectory: "_Site"
 assetsDirectory: "Content/Assets"
