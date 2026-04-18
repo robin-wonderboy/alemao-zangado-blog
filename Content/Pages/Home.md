@@ -5,6 +5,6 @@ slug: ""
 
 # O alemão zangado
 
-Um blog de Coimbra — sobre a cidade, as pessoas e as decisões que nos afetam a todos.
+Um blog de Coimbra.
 
 ## Últimos Posts

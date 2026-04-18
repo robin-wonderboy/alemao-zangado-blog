@@ -1,34 +1,32 @@
 ---
 title: "O percurso serpente – como Coimbra desperdiçou dinheiro para reinventar o jogging"
 date: 2025-10-15
-slug: "como-coimbra-desperdicou-dinheiro"
-categories: ["Coimbra"]
-tags: ["Coimbra", "despesas públicas", "desporto", "Mondego"]
-excerpt: "Coimbra inaugurou um percurso de corrida novinho em folha — mesmo ao lado do rio onde já corre toda a gente, de graça."
+tags: ["Coimbra", "despesas publicas"]
+summary: "Coimbra inaugurou um percurso de corrida novinho em folha — mesmo ao lado do rio onde ja corre toda a gente, de graca."
 ---
 
 Coimbra inaugurou recentemente um "percurso de corrida" novinho em folha.
 
-500 e 1100 metros de alcatrão a dar voltas como uma cobra entediada — mesmo ao lado do rio onde já corre toda a gente, de graça.
+500 e 1100 metros de alcatrao a dar voltas como uma cobra entediada — mesmo ao lado do rio onde ja corre toda a gente, de graca.
 
-É uma obra-prima de desperdício — de espaço e de dinheiro público.
+E uma obra-prima de desperdicio — de espaco e de dinheiro publico.
 
-Em vez de melhorar o percurso natural junto ao Mondego, que é bonito e funcional, a Câmara decidiu gastar milhares de euros num circuito artificial que ninguém pediu e ninguém usa.
+Em vez de melhorar o percurso natural junto ao Mondego, que e bonito e funcional, a Camara decidiu gastar milhares de euros num circuito artificial que ninguem pediu e ninguem usa.
 
 Quase se adivinha a conversa:
 
-"Temos de gastar o orçamento do desporto."
+"Temos de gastar o orcamento do desporto."
 
-"Mas as pessoas já correm junto ao rio."
+"Mas as pessoas ja correm junto ao rio."
 
 "Perfeito! Fazemos outra pista ao lado!"
 
-É este tipo de gasto público que irrita — não por ser mal-intencionado, mas por ser absurdo. É o resultado de decisões feitas para a fotografia, não para as pessoas.
+E este tipo de gasto publico que irrita — nao por ser mal-intencionado, mas por ser absurdo. E o resultado de decisoes feitas para a fotografia, nao para as pessoas.
 
-Passe lá de manhã e veja: vazio. Um monumento à imaginação burocrática — e ao dinheiro dos contribuintes transformado em alcatrão colorido.
+Passe la de manha e veja: vazio. Um monumento a imaginacao burocratica — e ao dinheiro dos contribuintes transformado em alcatrao colorido.
 
-Não seria melhor arranjar passeios, melhorar a iluminação ou cuidar da margem do rio?
+Nao seria melhor arranjar passeios, melhorar a iluminacao ou cuidar da margem do rio?
 
-Mas claro, isso não dá direito a fita vermelha nem a placa com logótipos.
+Mas claro, isso nao da direito a fita vermelha nem a placa com logotipos.
 
-Mais um "investimento" que ninguém usa, pago por todos nós.
+Mais um "investimento" que ninguem usa, pago por todos nos.
