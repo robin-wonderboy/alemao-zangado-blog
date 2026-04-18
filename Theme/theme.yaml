@@ -1,4 +1,4 @@
-name: "NFC.cool Blog"
+name: "O alemão zangado"
 colorScheme: "custom"
 fontPairing: "custom"
 favicons:
@@ -9,56 +9,55 @@ js:
    - "js/theme.js"
 headInlineScript: "(function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)})()"
 logo:
-   image: "images/nfc-cool-logo-dark.svg"
-   darkImage: "images/nfc-cool-logo-light.svg"
+   text: "O alemão zangado"
 tokens:
    colorAccent:
-      any: "#1170CF"
-      dark: "#00AAFF"
+      any: "#C45B28"
+      dark: "#E87A3A"
    colorAccentHover:
-      any: "#00AAFF"
-      dark: "#1170CF"
+      any: "#A84A1F"
+      dark: "#F09050"
    colorAccentLight:
-      any: "rgba(17, 112, 207, 0.08)"
-      dark: "rgba(0, 170, 255, 0.12)"
+      any: "rgba(196, 91, 40, 0.08)"
+      dark: "rgba(232, 122, 58, 0.12)"
    colorBg:
-      any: "#FFFFFF"
-      dark: "#0D1117"
+      any: "#FAFAF5"
+      dark: "#1A1A18"
    colorBgAlt:
-      any: "#F2F2F2"
-      dark: "#161B22"
+      any: "#F0EDE4"
+      dark: "#252520"
    colorBgCard:
       any: "#FFFFFF"
-      dark: "#161B22"
+      dark: "#252520"
    colorText:
-      any: "#212529"
-      dark: "#E6EDF3"
+      any: "#2D2A24"
+      dark: "#E8E4D9"
    colorTextSecondary:
-      any: "#4A5058"
-      dark: "#8B949E"
+      any: "#5C564A"
+      dark: "#9E978A"
    colorTextMuted:
-      any: "#6D737B"
-      dark: "#7D8590"
+      any: "#7A7468"
+      dark: "#807A6E"
    colorBorder:
-      any: "#DEE2E6"
-      dark: "#30363D"
+      any: "#D8D2C4"
+      dark: "#3A3630"
    colorBorderLight:
-      any: "#E9ECEF"
-      dark: "#21262D"
+      any: "#E8E2D6"
+      dark: "#2D2A25"
    colorShadow:
-      any: "rgba(33, 37, 41, 0.08)"
-      dark: "rgba(0, 0, 0, 0.3)"
+      any: "rgba(45, 42, 36, 0.08)"
+      dark: "rgba(0, 0, 0, 0.25)"
    colorShadowLg:
-      any: "rgba(33, 37, 41, 0.15)"
-      dark: "rgba(0, 0, 0, 0.45)"
+      any: "rgba(45, 42, 36, 0.15)"
+      dark: "rgba(0, 0, 0, 0.4)"
    fontHeading:
-      family: "Titillium Web"
+      family: "Crimson Pro"
       weights: [400, 600, 700]
    fontBody:
-      family: "Titillium Web"
-      weights: [400, 600, 700]
-   maxWidth: "1200px"
-   contentWidth: "720px"
-   headerHeight: "64px"
-   radius: "8px"
-   radiusLg: "12px"
+      family: "Source Serif 4"
+      weights: [400, 600]
+   maxWidth: "800px"
+   contentWidth: "680px"
+   headerHeight: "60px"
+   radius: "6px"
+   radiusLg: "10px"
