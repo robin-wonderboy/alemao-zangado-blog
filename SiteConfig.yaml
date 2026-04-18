@@ -1,0 +1,48 @@
+name: "O alemão zangado"
+baseURL: "https://alemao-zangado.github.io"
+description: "Um blog de Coimbra — sobre a cidade, as pessoas e as decisões que nos afetam a todos"
+language: "pt"
+
+localization:
+  defaultLanguage: "pt"
+
+contentDirectory: "Content"
+outputDirectory: "_Site"
+assetsDirectory: "Content/Assets"
+blogURLPrefix: "blog"
+categories: []
+
+author:
+  name: "Nicolo Stanciu"
+  email: "n.st@me.com"
+
+navigation:
+  logo:
+    text: "O alemão zangado"
+  items:
+    - title: "Blog"
+      url: "/blog/"
+    - title: "Sobre"
+      url: "/about/"
+  showSearch: true
+  showThemeToggle: true
+
+sections:
+  - name: "Blog"
+    slug: "blog"
+    contentDirectory: "Blog"
+    urlPrefix: "blog"
+    rssTitle: "O alemão zangado"
+    rssDescription: "Um blog de Coimbra — sobre a cidade, as pessoas e as decisões que nos afetam a todos"
+
+homePage:
+  title: "O alemão zangado"
+  subtitle: "Um blog de Coimbra"
+  recentPostsCount: 10
+
+footer:
+  copyrightName: "Nicolo Stanciu"
+  startYear: 2025
+  links:
+    - title: "Sobre"
+      url: "/about/"

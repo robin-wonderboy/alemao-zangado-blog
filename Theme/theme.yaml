@@ -1,0 +1,10 @@
+name: "O alemão zangado"
+colorScheme: "orange"
+fontPairing: "editorial"
+css:
+   - "css/theme.css"
+js:
+   - "js/theme.js"
+headInlineScript: "(function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)})()"
+logo:
+   text: "O alemão zangado"
