@@ -1,10 +1,6 @@
 ---
-title: "O alemão zangado"
+title: "Blog"
 slug: ""
 ---
 
-# O alemão zangado
-
-Um blog de Coimbra.
-
-## Últimos Posts
+# Blog

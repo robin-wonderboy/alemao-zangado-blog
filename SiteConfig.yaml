@@ -1,6 +1,6 @@
-name: "O alemão zangado"
+name: "Blog"
 baseURL: "https://alemao-zangado.github.io"
-description: "Um blog de Coimbra"
+description: "A blog about Coimbra"
 language: "en"
 
 contentDirectory: "Content"
@@ -28,12 +28,12 @@ sections:
     slug: "blog"
     contentDirectory: "Blog"
     urlPrefix: "blog"
-    rssTitle: "O alemão zangado"
-    rssDescription: "Um blog de Coimbra"
+    rssTitle: "Blog"
+    rssDescription: "A blog about Coimbra"
 
 homePage:
-  title: "O alemão zangado"
-  subtitle: "Um blog de Coimbra"
+  title: "Blog"
+  subtitle: "A blog about Coimbra"
   recentPostsCount: 10
 
 footer:

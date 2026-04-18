@@ -3,8 +3,6 @@ title: "Sobre"
 slug: "about"
 ---
 
-# O alemão zangado
+# Sobre
 
-Todo mundo precisa de um alemão que gosta de reclamar. Caso contrário, paramos de avançar.
-
-Um blog sobre Coimbra — sobre a cidade, as pessoas e as decisões que nos afetam a todos.
+Um blog sobre Coimbra.
