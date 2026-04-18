@@ -998,3 +998,8 @@ mark.sk-search-highlight {
       flex-direction: column;
    }
 }
+
+/* Hide translation notice — this is original Portuguese content, not translated */
+.sk-translation-notice {
+  display: none !important;
+}

@@ -8,12 +8,6 @@ assetsDirectory: "Content/Assets"
 blogURLPrefix: "blog"
 categories: []
 
-localization:
-  defaultLanguage: "pt"
-  languages: ["pt"]
-  translationNotice:
-    enabled: false
-
 author:
   name: "Nicolo Stanciu"
   email: "n.st@me.com"
