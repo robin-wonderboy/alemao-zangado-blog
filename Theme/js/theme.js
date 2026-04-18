@@ -4,6 +4,33 @@ document.addEventListener('DOMContentLoaded', function () {
       hljs.highlightAll();
    }
 
+   // Logo dark/light mode: add a second logo image for the alternate theme
+   var logoContainer = document.querySelector('.sk-site-logo');
+   if (logoContainer) {
+      var existingImg = logoContainer.querySelector('img');
+      if (existingImg) {
+         // Resolve theme image paths relative to the theme assets
+         var themeBase = '';
+         var cssLink = document.querySelector('link[href*="theme/css/"]');
+         if (cssLink) {
+            themeBase = cssLink.href.replace(/css\/.*$/, 'images/');
+         }
+         var darkLogoSrc = themeBase + 'nfc-cool-logo-dark.svg';
+         var lightLogoSrc = themeBase + 'nfc-cool-logo-light.svg';
+
+         // Existing image becomes the light-mode logo (dark logo on light bg)
+         existingImg.classList.add('sk-logo-dark');
+         existingImg.src = darkLogoSrc;
+
+         // Create light logo for dark mode
+         var lightImg = document.createElement('img');
+         lightImg.src = lightLogoSrc;
+         lightImg.alt = existingImg.alt || 'NFC.cool';
+         lightImg.classList.add('sk-logo-light');
+         existingImg.parentNode.insertBefore(lightImg, existingImg.nextSibling);
+      }
+   }
+
    // Theme toggle (dark/light)
    var toggle = document.querySelector('.sk-theme-toggle');
    if (toggle) {
@@ -42,8 +69,20 @@ document.addEventListener('DOMContentLoaded', function () {
       tooltip.textContent = 'Search (' + shortcutLabel + ')';
       searchBtn.appendChild(tooltip);
 
+      // Detect base path from <base> tag or current page
+      var basePath = (function() {
+         var base = document.querySelector('base');
+         if (base) return base.getAttribute('href').replace(/\/$/, '');
+         // Fallback: detect from logo link
+         var logo = document.querySelector('.sk-site-logo');
+         if (logo && logo.getAttribute('href')) {
+            return logo.getAttribute('href').replace(/\/$/, '');
+         }
+         return '';
+      })();
+
       function tagURL(slug) {
-         return '/tags/' + slug + '/';
+         return basePath + '/tags/' + slug + '/';
       }
 
       function highlightMatch(text, query) {
@@ -77,6 +116,12 @@ document.addEventListener('DOMContentLoaded', function () {
          return text;
       }
 
+      function articleURL(url) {
+         // If URL already starts with basePath, return as-is
+         if (basePath && url.indexOf(basePath) === 0) return url;
+         return basePath + url;
+      }
+
       function renderArticle(a, query, useText) {
          var preview = '';
          if (useText) {
@@ -84,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
          } else {
             preview = truncateAround(a.summary || '', query, 100);
          }
-         return '<a class="sk-search-post" href="' + a.url + '">' +
+         return '<a class="sk-search-post" href="' + articleURL(a.url) + '">' +
             '<span class="sk-search-post-title">' + highlightMatch(a.title, query) + '</span>' +
             (preview ? '<span class="sk-search-post-summary">' + highlightMatch(preview, query) + '</span>' : '') +
             '</a>';
@@ -142,13 +187,30 @@ document.addEventListener('DOMContentLoaded', function () {
          return searchOverlay;
       }
 
+      // Build tags map from articles (SiteKit format: tags are inline in articles)
+      function buildTagsMap(articles) {
+         var tags = {};
+         (articles || []).forEach(function(a) {
+            (a.tags || []).forEach(function(tag) {
+               if (!tags[tag]) {
+                  tags[tag] = tag.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); })
+                     .replace(/\bNfc\b/g, 'NFC').replace(/\bQr\b/g, 'QR').replace(/\bGdpr\b/g, 'GDPR')
+                     .replace(/\bEu\b/g, 'EU').replace(/\bIphone\b/g, 'iPhone');
+               }
+            });
+         });
+         return tags;
+      }
+
       function renderInstantResults(container, query) {
          var html = '';
          var lower = query.toLowerCase();
 
+         // Build tags from articles if not already present
+         var tags = searchData.tags || buildTagsMap(searchData.articles);
+
          // Match tags
          var matchedTags = [];
-         var tags = searchData.tags || {};
          for (var slug in tags) {
             if (slug.indexOf(lower) !== -1 || tags[slug].toLowerCase().indexOf(lower) !== -1) {
                matchedTags.push({ slug: slug, name: tags[slug] });
@@ -241,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function () {
          } else if (!fullTextLoading) {
             setLoading(true);
             fullTextLoading = true;
-            fetch('/assets/search-index.json')
+            fetch(basePath + '/assets/search-index.json')
                .then(function(res) { return res.json(); })
                .then(function(data) {
                   fullTextData = data;
@@ -258,7 +320,7 @@ document.addEventListener('DOMContentLoaded', function () {
       function ensureSearchData(callback) {
          if (searchData) { callback(); return; }
          setLoading(true);
-         fetch('/assets/nav-index.json')
+         fetch(basePath + '/assets/nav-index.json')
             .then(function(res) { return res.json(); })
             .then(function(data) {
                searchData = data;
@@ -319,4 +381,46 @@ document.addEventListener('DOMContentLoaded', function () {
          });
       }
    }
+
+   // Language picker — reads hreflang tags for correct cross-language URLs
+   var langPicker = document.querySelector('.sk-lang-picker');
+   if (langPicker) {
+      var langBtn = langPicker.querySelector('.sk-lang-btn');
+      var langMenu = langPicker.querySelector('.sk-lang-menu');
+
+      var hreflangMap = {};
+      document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function(link) {
+         var lang = link.getAttribute('hreflang');
+         if (lang && lang !== 'x-default') {
+            hreflangMap[lang] = link.getAttribute('href');
+         }
+      });
+
+      var labels = { en: 'English', de: 'Deutsch', ja: '日本語' };
+      var currentPath = location.pathname;
+      var currentLang = 'en';
+      if (currentPath.indexOf('/de/') === 0) currentLang = 'de';
+      else if (currentPath.indexOf('/ja/') === 0) currentLang = 'ja';
+
+      Object.keys(hreflangMap).forEach(function(lang) {
+         var a = document.createElement('a');
+         a.className = 'sk-lang-option';
+         a.textContent = labels[lang] || lang.toUpperCase();
+         a.href = hreflangMap[lang];
+         a.addEventListener('click', function() {
+            try { localStorage.setItem('preferredLang', lang); } catch(e) {}
+         });
+         if (lang === currentLang) a.classList.add('sk-lang-active');
+         langMenu.appendChild(a);
+      });
+
+      langBtn.addEventListener('click', function(e) {
+         e.stopPropagation();
+         langPicker.classList.toggle('sk-lang-open');
+      });
+      document.addEventListener('click', function() {
+         langPicker.classList.remove('sk-lang-open');
+      });
+   }
+
 });
