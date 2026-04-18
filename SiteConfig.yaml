@@ -8,6 +8,10 @@ assetsDirectory: "Content/Assets"
 blogURLPrefix: "blog"
 categories: []
 
+localization:
+  translationNotice:
+    enabled: false
+
 author:
   name: "Nicolo Stanciu"
   email: "n.st@me.com"
