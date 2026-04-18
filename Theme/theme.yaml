@@ -1,10 +1,64 @@
-name: "O alemão zangado"
-colorScheme: "orange"
-fontPairing: "editorial"
+name: "NFC.cool Blog"
+colorScheme: "custom"
+fontPairing: "custom"
+favicons:
+   - "images/favicon.png"
 css:
    - "css/theme.css"
 js:
    - "js/theme.js"
 headInlineScript: "(function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)})()"
 logo:
-   text: "O alemão zangado"
+   image: "images/nfc-cool-logo-dark.svg"
+   darkImage: "images/nfc-cool-logo-light.svg"
+tokens:
+   colorAccent:
+      any: "#1170CF"
+      dark: "#00AAFF"
+   colorAccentHover:
+      any: "#00AAFF"
+      dark: "#1170CF"
+   colorAccentLight:
+      any: "rgba(17, 112, 207, 0.08)"
+      dark: "rgba(0, 170, 255, 0.12)"
+   colorBg:
+      any: "#FFFFFF"
+      dark: "#0D1117"
+   colorBgAlt:
+      any: "#F2F2F2"
+      dark: "#161B22"
+   colorBgCard:
+      any: "#FFFFFF"
+      dark: "#161B22"
+   colorText:
+      any: "#212529"
+      dark: "#E6EDF3"
+   colorTextSecondary:
+      any: "#4A5058"
+      dark: "#8B949E"
+   colorTextMuted:
+      any: "#6D737B"
+      dark: "#7D8590"
+   colorBorder:
+      any: "#DEE2E6"
+      dark: "#30363D"
+   colorBorderLight:
+      any: "#E9ECEF"
+      dark: "#21262D"
+   colorShadow:
+      any: "rgba(33, 37, 41, 0.08)"
+      dark: "rgba(0, 0, 0, 0.3)"
+   colorShadowLg:
+      any: "rgba(33, 37, 41, 0.15)"
+      dark: "rgba(0, 0, 0, 0.45)"
+   fontHeading:
+      family: "Titillium Web"
+      weights: [400, 600, 700]
+   fontBody:
+      family: "Titillium Web"
+      weights: [400, 600, 700]
+   maxWidth: "1200px"
+   contentWidth: "720px"
+   headerHeight: "64px"
+   radius: "8px"
+   radiusLg: "12px"

@@ -1,10 +1,10 @@
 name: "O alemão zangado"
 baseURL: "https://alemao-zangado.github.io"
 description: "Um blog de Coimbra"
-language: "pt"
+language: "en"
 
 localization:
-  defaultLanguage: "pt"
+  defaultLanguage: "en"
 
 contentDirectory: "Content"
 outputDirectory: "_Site"
@@ -19,11 +19,7 @@ author:
 navigation:
   logo:
     text: "O alemão zangado"
-  items:
-    - title: "Blog"
-      url: "/blog/"
-    - title: "Sobre"
-      url: "/about/"
+  items: []
   showSearch: true
   showThemeToggle: true
 
@@ -43,6 +39,3 @@ homePage:
 footer:
   copyrightName: "Nicolo Stanciu"
   startYear: 2025
-  links:
-    - title: "Sobre"
-      url: "/about/"
