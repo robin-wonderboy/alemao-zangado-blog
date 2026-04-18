@@ -9,6 +9,8 @@ blogURLPrefix: "blog"
 categories: []
 
 localization:
+  defaultLanguage: "pt"
+  languages: ["pt"]
   translationNotice:
     enabled: false
 
