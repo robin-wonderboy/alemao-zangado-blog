@@ -3,9 +3,6 @@ baseURL: "https://alemao-zangado.github.io"
 description: "Um blog de Coimbra"
 language: "en"
 
-localization:
-  defaultLanguage: "en"
-
 contentDirectory: "Content"
 outputDirectory: "_Site"
 assetsDirectory: "Content/Assets"
@@ -18,7 +15,10 @@ author:
 
 navigation:
   logo:
-    text: "O alemão zangado"
+    image: "/assets/logo-black.png"
+    imageWidth: 120
+    imageHeight: 30
+    text: ""
   items: []
   showSearch: true
   showThemeToggle: true
