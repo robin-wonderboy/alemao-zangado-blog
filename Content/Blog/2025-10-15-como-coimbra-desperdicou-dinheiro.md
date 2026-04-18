@@ -1,4 +1,5 @@
 ---
+id: a1emang01
 title: "O percurso serpente – como Coimbra desperdiçou dinheiro para reinventar o jogging"
 date: 2025-10-15
 tags: ["Coimbra", "despesas públicas"]
